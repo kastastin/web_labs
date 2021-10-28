@@ -1,0 +1,27 @@
+@import "/css/style.css";
+
+.footer-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.footer-list {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.exercise-item {
+    font-weight: 700;
+    transition: 333ms;
+}
+
+.exercise-item:hover {
+    font-weight: 700;
+    transform: scale(1.1);
+    color: orange;
+    cursor: pointer;
+}
