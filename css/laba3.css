@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+.section2, .section3, .main, .section6, .read_exercise_btn, .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    justify-content: space-between;
+}
+
+.read_exercise_btn {
+    height: 50%;
+    width: 280px;
+    border: 2px dotted violet;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.read_exercise_btn:hover {
+    border: 3px dotted yellow;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+aside {
+    background-color: pink;
+    column-count: 2;
+    min-height: 100%;
+    /* min-width: 363px; */
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+figure {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    break-inside: avoid;
+}
+
+figure > img {
+    grid-row: 1 / -1;
+    grid-column: 1;
+}
