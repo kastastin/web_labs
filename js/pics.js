@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     let pics = Array.from(document.querySelectorAll('.pic'));
 
-
     showPics(linkOnPics, pics);
     setAttributeChoosen(pics);
     setHighlight();
-
-    
 });
+
 
 function showPics(links, pictures) {
     for (let i = 0; i < links.length; i++) {
@@ -19,7 +17,6 @@ function showPics(links, pictures) {
 
 
 function setAttributeChoosen(pictures) {
-
     const request = new XMLHttpRequest();
     request.open('GET', 'http://localhost:3000/settings');
     request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
@@ -55,7 +52,8 @@ function setHighlight() {
         choosenPicSrcs = [];
         
     imgs.forEach(img => {
-        img.addEventListener('load', () => {
+        
+        img.addEventListener('load', (e) => {
             if (img.getAttribute('data-ischoosen') == 'true') {
                 img.style.border = '4px solid yellow'; 
                 choosenPicSrcs.push(img.src);
@@ -127,44 +125,6 @@ function sendWithXML(e, choosenSrcs, images, cols) {
         }
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 const linkOnPics = [

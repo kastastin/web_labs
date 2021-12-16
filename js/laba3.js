@@ -10,7 +10,13 @@ exerciseButton.addEventListener('click', () => {
 function runExercise() {
     let isChooseImgs = confirm("Об'єкт буде створено в блоці '4', тому що він має більші розміри\nОберіть картинки");
 
-    if (isChooseImgs) window.location.href="pics.html";
+    // if (isChooseImgs) window.location.href="pics.html";
+    if (isChooseImgs) {
+        window.open(
+            'pics.html',
+            '_blank'
+          );
+    }
 }
 
 

@@ -26,15 +26,16 @@ function indicateCurrentLaba() {
 
 function readCookie(name) {
 	let nameCook = name + "=",
-	    spl = document.cookie.split(';');
+	    splittedCookie = document.cookie.split(';');
 
-	for(var i=0; i<spl.length; i++) {
-		var c = spl[i];
-		while(c.charAt(0) == " ") {
-			c = c.substring(1, c.length);
+	for(let i = 0; i < splittedCookie.length; i++) {
+		let sign = splittedCookie[i];
+		while(sign.charAt(0) == " ") {
+			sign = sign.substring(1, sign.length);
 		}
-		if(c.indexOf(nameCook) == 0) {
-			return c.substring(nameCook.length, c.length);
+
+		if(sign.indexOf(nameCook) == 0) {
+			return sign.substring(nameCook.length, sign.length);
 		}
 	}
 	return null;
